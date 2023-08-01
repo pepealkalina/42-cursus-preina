@@ -8,4 +8,5 @@ This is all my projects at 42 school cursus
 ## **MINITALK** -> [![preina-g's 42 minitalk Score](https://badge42.vercel.app/api/v2/cl8ys36dg00350gl8f28t0eiy/project/2882663)](https://github.com/JaeSeoKim/badge42)
 ## **SO_LONG** -> [![preina-g's 42 so_long Score](https://badge42.vercel.app/api/v2/cl8ys36dg00350gl8f28t0eiy/project/2929355)](https://github.com/JaeSeoKim/badge42)
 ## **PUSH_SWAP** -> [![preina-g's 42 push_swap Score](https://badge42.vercel.app/api/v2/cl8ys36dg00350gl8f28t0eiy/project/2971583)](https://github.com/JaeSeoKim/badge42)
+## **PHILOSOPHERS** -> [![preina-g's 42 Philosophers Score](https://badge42.vercel.app/api/v2/cl8ys36dg00350gl8f28t0eiy/project/3071764)](https://github.com/JaeSeoKim/badge42)
 

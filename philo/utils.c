@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 12:49:43 by preina-g          #+#    #+#             */
-/*   Updated: 2023/06/21 12:51:37 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/07/26 11:51:13 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,41 @@ int	ft_atoi(const char *str)
 			i++;
 		}
 		else
-		i++;
+			i++;
 	}
 	num = ft_putnbr(str, i);
 	return (num * nb);
+}
+/*timeval is used for determinate a certain interval of time*/
+
+long long	ft_get_timestamp(void)
+{
+	struct timeval	time;
+
+	gettimeofday(&time, NULL);
+	return ((time.tv_sec * 1000) + (time.tv_usec / 1000));
+}
+
+void	ft_print_msg(t_data *data, const char *msg, int philo_id)
+{
+	pthread_mutex_lock(data->print_msg);
+	if (data->dead == FALSE)
+	{
+		printf("%lli ", (ft_get_timestamp() - data->timestamp));
+		printf(" philo %i %s\n", philo_id + 1, msg);
+	}
+	pthread_mutex_unlock(data->print_msg);
+}
+
+void	ft_sleep(long long time, t_data *data)
+{
+	long long	timed;
+
+	timed = ft_get_timestamp();
+	while (data->dead == FALSE)
+	{
+		if ((ft_get_timestamp() - timed) >= time)
+			break ;
+		usleep(50);
+	}
 }
